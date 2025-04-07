@@ -1,0 +1,34 @@
+<!DOCTYPE html>
+<html lang="fr">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Affichage des Rayons du Magasin (Chemin avec Points Intermédiaires)</title>
+    <style>
+        body { margin: 0; display: flex; flex-direction: row; justify-content: center; align-items: center; min-height: 100vh; background-color: #f4f4f4; }
+        .controls { margin-bottom: 10px; display: flex; gap: 10px; align-items: center; }
+        #intermediatePointsList { margin-top: 10px; }
+        #intermediatePointsList div { margin-bottom: 5px; }
+        canvas { border: 1px solid #333; background-color: #eee; }
+    </style>
+</head>
+<body>
+<div style="padding-right: 20px">
+    <div class="controls">
+        <div>
+            <input type="radio" id="addIntermediate" name="targetPoint" value="intermediate">
+            <label for="addIntermediate">Ajouter Intermédiaire</label>
+        </div>
+        <button id="calculatePathBtn">Calculer le Chemin</button>
+    </div>
+    <div id="intermediatePointsList">
+        <h3>Points Intermédiaires:</h3>
+    </div>
+</div>
+<canvas id="magasinCanvas"></canvas>
+
+<script src="js/magasin_classes.js"></script>
+<script src="js/chemin_magasin.js"></script>
+<script src="js/main.js"></script>
+</body>
+</html>
